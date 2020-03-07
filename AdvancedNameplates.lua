@@ -92,14 +92,17 @@ end
 function OnAddOnLoaded(eventCode, addOnName)
     if (ANP.appName ~= addOnName) then return end
 	
-	LMP:Register("font", "Adventure",               [[AdvancedNameplates/fonts/Adventure.ttf]]              	)
-    LMP:Register("font", "Arialn",         			[[AdvancedNameplates/fonts/arialn.ttf]]           			)
-    LMP:Register("font", "ESO Cartographer",  		[[AdvancedNameplates/fonts/esocartographer-bold.otf]]   	)
-    LMP:Register("font", "Fitzgerald",      		[[AdvancedNameplates/fonts/Fitzgerald.ttf]]       	    	)
-    LMP:Register("font", "Gentium",         		[[AdvancedNameplates/fonts/Gentium.ttf]]                	)
-    LMP:Register("font", "HookedUp",             	[[AdvancedNameplates/fonts/HookedUp.ttf]]               	)
-    LMP:Register("font", "Futura Condensed Medium", [[AdvancedNameplates/fonts/fcm.ttf]]    )
-
+	LMP:Register("font", "Adventure",               [[AdvancedNameplates/fonts/Adventure.ttf]]              )
+    LMP:Register("font", "Arialn",         			[[AdvancedNameplates/fonts/arialn.ttf]]                 )
+    LMP:Register("font", "Black Chancery",  		[[AdvancedNameplates/fonts/BlackChancery.ttf]]          )
+    LMP:Register("font", "Century Gothic",  		[[AdvancedNameplates/fonts/CenturyGothic.ttf]]          )
+    LMP:Register("font", "ESO Cartographer",  		[[AdvancedNameplates/fonts/esocartographer-bold.otf]]   )
+    LMP:Register("font", "Fitzgerald",      		[[AdvancedNameplates/fonts/Fitzgerald.ttf]]             )
+    LMP:Register("font", "Futura Condensed Medium", [[AdvancedNameplates/fonts/fcm.ttf]]                    )
+    LMP:Register("font", "Gentium",         		[[AdvancedNameplates/fonts/Gentium.ttf]]                )
+    LMP:Register("font", "HookedUp",             	[[AdvancedNameplates/fonts/HookedUp.ttf]]               )
+    LMP:Register("font", "Magic Cards Normal",      [[AdvancedNameplates/fonts/MagicCardsNormal.ttf]]       )
+    LMP:Register("font", "Skurri",                  [[AdvancedNameplates/fonts/Skurri.ttf]]                 )
 	
 	local defaults = {
 		FontsKB = "Univers 67",
