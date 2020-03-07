@@ -5,7 +5,7 @@
   
 ANP = ANP or {}
 ANP.appName = "AdvancedNameplates"
-local LMP = LibMediaProvider
+local LMP = LibStub:GetLibrary("LibMediaProvider-1.0")
 
 function ANP.Fonts()
 
