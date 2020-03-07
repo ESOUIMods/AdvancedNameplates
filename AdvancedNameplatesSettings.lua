@@ -55,9 +55,9 @@ local LAM2 = LibStub:GetLibrary("LibAddonMenu-2.0")
 local ANPoptions = { 
 	[1] = {
 	    type = "header",
-		name = "Keyboard Nameplates",
-		registerForRefresh = true,
-        registerForDefaults = true,
+	    name = "Keyboard Nameplates",
+	    registerForRefresh = true,
+	    registerForDefaults = true,
 	},
 	[2] = {
 		type = "dropdown",
@@ -72,33 +72,12 @@ local ANPoptions = {
 		end,
 	},
 	[3] = {
-		type = "dropdown",
-		name = "Style",
-		tooltip = "This does not work yet. Changes the style of the text in Keyboard Mode.",
-		choices = StyleList,
-		getFunc = function() return ANP.SV.StylesKB end,
-		setFunc = function(val) ANP.SV.StylesKB = val end,
+	    type = "header",
+	    name = "Gamepad Nameplates",
+	    registerForRefresh = true,
+	    registerForDefaults = true,
 	},
 	[4] = {
-	 	type = "slider",
-		name = "Size",
-		tooltip = "This does not work yet. Move the slider to change the text size",
-		min = 1,
-		max = 100,
-		step = 1,
-		getFunc = function() return ANP.SV.SizeKB end,
-		setFunc = function(val) 
-			ANP.SV.SizeKB = val
-            ANP.SizeKB(val)
-        end,
-	},	
-	[5] = {
-	    type = "header",
-		name = "Gamepad Nameplates",
-		registerForRefresh = true,
-        registerForDefaults = true,
-	},
-	[6] = {
 		type = "dropdown",
 		name = "Font",
 		tooltip = "Changes the look of the text in Gamepad Mode.",
@@ -108,27 +87,6 @@ local ANPoptions = {
 		setFunc = function(val) ANP.SV.FontsGP = val 
 		  ANP.Fonts(val)
 		end,
-	},
-	[7] = {
-		type = "dropdown",
-		name = "Style",
-		tooltip = "This does not work yet. Changes the style of the text in Gamepad Mode.",
-		choices = StyleList,
-		getFunc = function() return ANP.SV.StylesGP end,
-		setFunc = function(val) ANP.SV.StylesGP = val end,
-	},
-	[8] = {
-	 	type = "slider",
-		name = "Size",
-		tooltip = "This does not work yet. Move the slider to change the text size",
-		min = 1,
-		max = 100,
-		step = 1,
-		getFunc = function() return ANP.SV.SizeKB end,
-		setFunc = function(val) 
-			ANP.SV.SizeGP = val
-            ANP.SizeGP(val)
-        end,
 	},
 }
 
