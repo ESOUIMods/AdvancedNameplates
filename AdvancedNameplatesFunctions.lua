@@ -42,7 +42,7 @@ function ANP.FontFitzgeraldKB()
 end
 
 function ANP.FontFuturaCondensedKB()
-	SetNameplateKeyboardFont("EsoUI/Common/Fonts/FTN57.otf", 1)
+	SetNameplateKeyboardFont("EsoUI/Common/Fonts/ftn57.otf", 1)
 end
 
 function ANP.FontGentiumKB()
@@ -54,7 +54,7 @@ function ANP.FontHookedUpKB()
 end
 
 function ANP.FontProseAntiqueKB()
-	SetNameplateKeyboardFont("EsoUI/Common/Fonts/ProseAntiquePSMT.otf", 1)
+	SetNameplateKeyboardFont("EsoUI/Common/Fonts/proseantiquepsmt.otf", 1)
 end
 
 function ANP.FontSkurriKB()
@@ -62,7 +62,7 @@ function ANP.FontSkurriKB()
 end
 
 function ANP.FontHandwrittenKB()
-	SetNameplateKeyboardFont("EsoUI/Common/Fonts/Handwritten-Bold.otf", 1)
+	SetNameplateKeyboardFont("EsoUI/Common/Fonts/handwritten_bold.otf", 1)
 end
 
 function ANP.FontTrajanProKB()
@@ -116,7 +116,7 @@ function ANP.FontFitzgeraldGP()
 end
 
 function ANP.FontFuturaCondensedGP()
-	SetNameplateGamepadFont("EsoUI/Common/Fonts/FTN57.otf", 1)
+	SetNameplateGamepadFont("EsoUI/Common/Fonts/ftn57.otf", 1)
 end
 
 function ANP.FontGentiumGP()
@@ -128,7 +128,7 @@ function ANP.FontHookedUpGP()
 end
 
 function ANP.FontProseAntiqueGP()
-	SetNameplateGamepadFont("EsoUI/Common/Fonts/ProseAntiquePSMT.otf", 1)
+	SetNameplateGamepadFont("EsoUI/Common/Fonts/proseantiquepsmt.otf", 1)
 end
 
 function ANP.FontSkurriGP()
@@ -136,7 +136,7 @@ function ANP.FontSkurriGP()
 end
 
 function ANP.FontHandwrittenGP()
-	SetNameplateGamepadFont("EsoUI/Common/Fonts/Handwritten-Bold.otf", 1)
+	SetNameplateGamepadFont("EsoUI/Common/Fonts/handwritten_bold.otf", 1)
 end
 
 function ANP.FontTrajanProGP()
