@@ -17,6 +17,10 @@ function ANP.Fonts()
 		ANP.FontAdventureKB()
 	elseif ANP.SV.FontsKB == "Arialn" then
 		ANP.FontArialnKB()
+	elseif ANP.SV.FontsKB == "Black Chancery" then
+		ANP.BlackChanceryKB()
+	elseif ANP.SV.FontsKB == "Century Gothic" then
+		ANP.CenturyGothicKB()
 	elseif ANP.SV.FontsKB == "Consolas" then
 		ANP.FontConsolasKB()
 	elseif ANP.SV.FontsKB == "ESO Cartographer" then
@@ -29,6 +33,8 @@ function ANP.Fonts()
 		ANP.FontGentiumKB()
 	elseif ANP.SV.FontsKB == "Hooked Up" then
 		ANP.FontHookedUpKB()
+	elseif ANP.SV.FontsKB == "Magic Cards Normal" then
+		ANP.MagicCardsNormalKB()
 	elseif ANP.SV.FontsKB == "ProseAntique" then
 		ANP.FontProseAntiqueKB()
 	elseif ANP.SV.FontsKB == "Skurri" then
@@ -55,6 +61,10 @@ function ANP.Fonts()
 		ANP.FontAdventureGP()
 	elseif ANP.SV.FontsGP == "Arialn" then
 		ANP.FontArialnGP()
+	elseif ANP.SV.FontsGP == "Black Chancery" then
+		ANP.BlackChanceryGP()
+	elseif ANP.SV.FontsGP == "Century Gothic" then
+		ANP.CenturyGothicGP()
 	elseif ANP.SV.FontsGP == "Consolas" then
 		ANP.FontConsolasGP()
 	elseif ANP.SV.FontsGP == "ESO Cartographer" then
@@ -65,6 +75,8 @@ function ANP.Fonts()
 		ANP.FontGentiumGP()
 	elseif ANP.SV.FontsGP == "Hooked Up" then
 		ANP.FontHookedUpGP()
+	elseif ANP.SV.FontsGP == "Magic Cards Normal" then
+		ANP.MagicCardsNormalGP()
 	elseif ANP.SV.FontsGP == "ProseAntique" then
 		ANP.FontProseAntiqueGP()
 	elseif ANP.SV.FontsGP == "Skurri" then

@@ -13,6 +13,18 @@ function ANP.FontArialnKB()
 	SetNameplateKeyboardFont("AdvancedNameplates/fonts/arialn.ttf", 1)
 end
 
+function ANP.BlackChanceryKB()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/BlackChancery.ttf", 1)
+end
+
+function ANP.CenturyGothicKB()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/CenturyGothic.ttf", 1)
+end
+
+function ANP.MagicCardsNormalKB()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/MagicCardsNormal.ttf", 1)
+end
+
 function ANP.FontSkyrimKB()
 	SetNameplateKeyboardFont("AdvancedNameplates/fonts/fcm.ttf", 1)
 end
@@ -77,6 +89,18 @@ end
 
 function ANP.FontArialnGP()
 	SetNameplateGamepadFont("AdvancedNameplates/fonts/arialn.ttf", 1)
+end
+
+function ANP.BlackChanceryGP()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/BlackChancery.ttf", 1)
+end
+
+function ANP.CenturyGothicGP()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/CenturyGothic.ttf", 1)
+end
+
+function ANP.MagicCardsNormalGP()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/MagicCardsNormal.ttf", 1)
 end
 
 function ANP.FontConsolasGP()

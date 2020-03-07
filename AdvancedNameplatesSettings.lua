@@ -9,6 +9,8 @@ ANP = ANP or {}
 local FontList = {
 	"Adventure",
 	"Arialn",
+    "Black Chancery",
+    "Century Gothic",
 	"Consolas",
 	"ESO Cartographer",
 	"Fitzgerald",
@@ -16,6 +18,7 @@ local FontList = {
 	"Futura Condensed Medium",
 	"Gentium",
 	"Hooked Up",
+    "Magic Cards Normal",
 	"ProseAntique",
 	"Skurri",
 	"Skyrim Handwritten",
