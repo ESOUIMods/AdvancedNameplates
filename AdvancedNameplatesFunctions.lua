@@ -13,6 +13,10 @@ function ANP.FontArialnKB()
 	SetNameplateKeyboardFont("AdvancedNameplates/fonts/arialn.ttf", 1)
 end
 
+function ANP.FontSkyrimKB()
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/fcm.ttf", 1)
+end
+
 function ANP.FontConsolasKB()
 	SetNameplateKeyboardFont("EsoUI/Common/Fonts/consola.ttf", 1)
 end

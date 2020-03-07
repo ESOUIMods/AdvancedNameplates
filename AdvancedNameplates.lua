@@ -33,6 +33,8 @@ function ANP.Fonts()
 		ANP.FontProseAntiqueKB()
 	elseif ANP.SV.FontsKB == "Skurri" then
 		ANP.FontSkurriKB()
+	elseif ANP.SV.FontsKB == "Futura Condensed Medium" then
+		ANP.FontSkyrimKB()
 	elseif ANP.SV.FontsKB == "Skyrim Handwritten" then
 		ANP.FontHandwrittenKB()
 	elseif ANP.SV.FontsKB == "Trajan Pro" then
@@ -90,12 +92,14 @@ end
 function OnAddOnLoaded(eventCode, addOnName)
     if (ANP.appName ~= addOnName) then return end
 	
-	LMP:Register("font", "Adventure",               [[AdvancedNameplates/fonts/Adventure.ttf]]              )
-    LMP:Register("font", "Arialn",         			[[AdvancedNameplates/fonts/arialn.ttf]]           		)
-    LMP:Register("font", "ESO Cartographer",  		[[AdvancedNameplates/fonts/esocartographer-bold.otf]]   )
-    LMP:Register("font", "Fitzgerald",      		[[AdvancedNameplates/fonts/Fitzgerald.ttf]]       	    )
-    LMP:Register("font", "Gentium",         		[[AdvancedNameplates/fonts/Gentium.ttf]]                )
-    LMP:Register("font", "HookedUp",             	[[AdvancedNameplates/fonts/HookedUp.ttf]]               )
+	LMP:Register("font", "Adventure",               [[AdvancedNameplates/fonts/Adventure.ttf]]              	)
+    LMP:Register("font", "Arialn",         			[[AdvancedNameplates/fonts/arialn.ttf]]           			)
+    LMP:Register("font", "ESO Cartographer",  		[[AdvancedNameplates/fonts/esocartographer-bold.otf]]   	)
+    LMP:Register("font", "Fitzgerald",      		[[AdvancedNameplates/fonts/Fitzgerald.ttf]]       	    	)
+    LMP:Register("font", "Gentium",         		[[AdvancedNameplates/fonts/Gentium.ttf]]                	)
+    LMP:Register("font", "HookedUp",             	[[AdvancedNameplates/fonts/HookedUp.ttf]]               	)
+    LMP:Register("font", "Futura Condensed Medium", [[AdvancedNameplates/fonts/fcm.ttf]]    )
+
 	
 	local defaults = {
 		FontsKB = "Univers 67",
