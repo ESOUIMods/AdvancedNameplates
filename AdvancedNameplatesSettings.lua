@@ -46,17 +46,17 @@ local ANPpanel = {
         registerForDefaults = true,
 }
 
-local LAM = LibStub( 'LibAddonMenu-2.0', true )
-	if ( not LAM ) then return end
+local LAM2 = LibStub:GetLibrary("LibAddonMenu-2.0")
+	if ( not LAM2 ) then return end
 
 local ANPoptions = { 
-	{
+	[1] = {
 	    type = "header",
 		name = "Keyboard Nameplates",
 		registerForRefresh = true,
         registerForDefaults = true,
 	},
-	{
+	[2] = {
 		type = "dropdown",
 		name = "Font",
 		tooltip = "Changes the look of the text in Keyboard Mode.",
@@ -68,7 +68,7 @@ local ANPoptions = {
 			ANP.Fonts(val)
 		end,
 	},
-	{
+	[3] = {
 		type = "dropdown",
 		name = "Style",
 		tooltip = "This does not work yet. Changes the style of the text in Keyboard Mode.",
@@ -76,7 +76,7 @@ local ANPoptions = {
 		getFunc = function() return ANP.SV.StylesKB end,
 		setFunc = function(val) ANP.SV.StylesKB = val end,
 	},
-	{
+	[4] = {
 	 	type = "slider",
 		name = "Size",
 		tooltip = "This does not work yet. Move the slider to change the text size",
@@ -89,13 +89,13 @@ local ANPoptions = {
             ANP.SizeKB(val)
         end,
 	},	
-	{
+	[5] = {
 	    type = "header",
 		name = "Gamepad Nameplates",
 		registerForRefresh = true,
         registerForDefaults = true,
 	},
-	{
+	[6] = {
 		type = "dropdown",
 		name = "Font",
 		tooltip = "Changes the look of the text in Gamepad Mode.",
@@ -106,7 +106,7 @@ local ANPoptions = {
 		  ANP.Fonts(val)
 		end,
 	},
-	{
+	[7] = {
 		type = "dropdown",
 		name = "Style",
 		tooltip = "This does not work yet. Changes the style of the text in Gamepad Mode.",
@@ -114,7 +114,7 @@ local ANPoptions = {
 		getFunc = function() return ANP.SV.StylesGP end,
 		setFunc = function(val) ANP.SV.StylesGP = val end,
 	},
-	{
+	[8] = {
 	 	type = "slider",
 		name = "Size",
 		tooltip = "This does not work yet. Move the slider to change the text size",
@@ -127,9 +127,9 @@ local ANPoptions = {
             ANP.SizeGP(val)
         end,
 	},
-	}
+}
 
-function ANP:initLAM()
-	LAM:RegisterAddonPanel("Advanced Nameplates", ANPpanel)
-	LAM:RegisterOptionControls("Advanced Nameplates", ANPoptions)
+function ANP:initLAM2()
+	LAM2:RegisterAddonPanel(ANP.appName, ANPpanel)
+	LAM2:RegisterOptionControls(ANP.appName, ANPoptions)
 end
