@@ -151,8 +151,8 @@ function OnAddOnLoaded(eventCode, addOnName)
     LMP:Register("font", "Skurri",                  [[AdvancedNameplates/fonts/Skurri.ttf]]                 )
 	
 	local defaults = {
-		FontsKB = "Univers 67",
-		FontsGP = "Futura Condensed",
+		FontsKB = "Univers LT Std 47 Cn Lt",
+		FontsGP = "Futura Std Con",
 	}
 	
 	ANP.SV = ZO_SavedVars:NewAccountWide("AdvancedNameplates_SavedVariables", 1, nil, defaults)
