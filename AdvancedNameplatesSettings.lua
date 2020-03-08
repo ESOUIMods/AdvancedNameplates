@@ -5,19 +5,19 @@
 
 ANP = ANP or {}
 
-
 local FontList = {
 	"Adventure",
 	"All Hooked Up",
 	"Arial Narrow",
-    "Black Chancery",
-    "Century Gothic",
+	"Black Chancery",
+	"Century Gothic",
 	"Consolas",
+	"Crimson Text",
 	"ESO Cartographer",
 	"Fitzgerald",
-    "Fwntlgudc 70 DB",
-    "Fwudc 70 Med",
-    "Kafupenji Med",
+	"Fwntlgudc 70 DB",
+	"Fwudc 70 Med",
+	"Kafupenji Med",
 	"Futura",
 	"Futura Con Book",
 	"Futura Con Med",
@@ -26,14 +26,17 @@ local FontList = {
 	"Futura Std Con Bold",
 	"Futura Std Con Lt",
 	"Gentium",
-    "Magic Cards Normal",
+	"Magic Cards Normal",
+	"Nanum Pen Script",
+	"Patrick Hand SC",
+	"Permanent Marker",
 	"Prose Antique",
 	"Skurri",
 	"Skyrim Handwritten",
 	"Trajan Pro",
 	"Univers LT Std 55",
 	"Univers LT Std 57 Cn",
-	"Univers LT Std 47 Cn Lt",
+	"Univers Lt Std Con (Default)"
 }
 
 local StyleList = {

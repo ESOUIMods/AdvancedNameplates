@@ -2,7 +2,8 @@
 ## Description: Provides Additional Options For Nameplates
 ## Author: Sharlikran, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r
 ## APIVersion: 100029
-## Version: 1.6
+## AddOnVersion: 17
+## Version: 1.7
 ## SavedVariables: AdvancedNameplates_SavedVariables
 ## DependsOn:  LibMediaProvider-1.0 LibAddonMenu-2.0
 
