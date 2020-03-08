@@ -15,41 +15,57 @@ function ANP.Fonts()
 	-- Keyboard Font Calls for LAM --
 	if ANP.SV.FontsKB == "Adventure" then
 		ANP.FontAdventureKB()
-	elseif ANP.SV.FontsKB == "Arialn" then
-		ANP.FontArialnKB()
+	elseif ANP.SV.FontsKB == "Arial Narrow" then
+		ANP.FontArialnNarrowKB()
 	elseif ANP.SV.FontsKB == "Black Chancery" then
 		ANP.BlackChanceryKB()
 	elseif ANP.SV.FontsKB == "Century Gothic" then
 		ANP.CenturyGothicKB()
 	elseif ANP.SV.FontsKB == "Consolas" then
 		ANP.FontConsolasKB()
+	elseif ANP.SV.FontsKB == "Fwntlgudc 70 DB" then
+		ANP.fwntlgudc70_dbKB()
+	elseif ANP.SV.FontsKB == "Fwudc 70 Med" then
+		ANP.fwudc_70_mKB()
+	elseif ANP.SV.FontsKB == "Kafupenji Med" then
+		ANP.kafupenji_mKB()
 	elseif ANP.SV.FontsKB == "ESO Cartographer" then
 		ANP.FontCartographerKB()
 	elseif ANP.SV.FontsKB == "Fitzgerald" then
 		ANP.FontFitzgeraldKB()
-	elseif ANP.SV.FontsKB == "Futura Condensed" then
-		ANP.FontFuturaCondensedKB()
+	elseif ANP.SV.FontsKB == "Futura" then
+		ANP.FontFuturaKB()
+	elseif ANP.SV.FontsKB == "Futura Con Book" then
+		ANP.FontFuturaCondensedBookKB()
+	elseif ANP.SV.FontsKB == "Futura Con Med" then
+		ANP.FontFuturaCondensedMedKB()
+	elseif ANP.SV.FontsKB == "Futura Con Bold" then
+		ANP.FontFuturaCondensedBoldKB()
+	elseif ANP.SV.FontsKB == "Futura Std Con" then
+		ANP.FontFuturaStandardCondensedKB()
+	elseif ANP.SV.FontsKB == "Futura Std Con Bold" then
+		ANP.FontFuturaStandardCondensedBoldKB()
+	elseif ANP.SV.FontsKB == "Futura Std Con Lt" then
+		ANP.FontFuturaStandardCondensedLightKB()
 	elseif ANP.SV.FontsKB == "Gentium" then
 		ANP.FontGentiumKB()
-	elseif ANP.SV.FontsKB == "Hooked Up" then
+	elseif ANP.SV.FontsKB == "All Hooked Up" then
 		ANP.FontHookedUpKB()
 	elseif ANP.SV.FontsKB == "Magic Cards Normal" then
 		ANP.MagicCardsNormalKB()
-	elseif ANP.SV.FontsKB == "ProseAntique" then
+	elseif ANP.SV.FontsKB == "Prose Antique" then
 		ANP.FontProseAntiqueKB()
 	elseif ANP.SV.FontsKB == "Skurri" then
 		ANP.FontSkurriKB()
-	elseif ANP.SV.FontsKB == "Futura Condensed Medium" then
-		ANP.FontSkyrimKB()
 	elseif ANP.SV.FontsKB == "Skyrim Handwritten" then
 		ANP.FontHandwrittenKB()
 	elseif ANP.SV.FontsKB == "Trajan Pro" then
-		ANP.FontTrajanProGP()
-	elseif ANP.SV.FontsKB == "Univers 55" then
+		ANP.FontTrajanProKB()
+	elseif ANP.SV.FontsKB == "Univers LT Std 55" then
 		ANP.FontUnivers55KB()		
-	elseif ANP.SV.FontsKB == "Univers 57" then
+	elseif ANP.SV.FontsKB == "Univers LT Std 57 Cn" then
 		ANP.FontUnivers57KB()
-	else ANP.SV.FontsKB = "Univers 67"
+	else ANP.SV.FontsKB = "Univers LT Std 47 Cn Lt"
 		ANP.FontUnivers67KB()
 	end
 
@@ -59,25 +75,45 @@ function ANP.Fonts()
     -- Gamepad Font Calls for LAM --
 	if ANP.SV.FontsGP == "Adventure" then
 		ANP.FontAdventureGP()
-	elseif ANP.SV.FontsGP == "Arialn" then
-		ANP.FontArialnGP()
+	elseif ANP.SV.FontsGP == "Arial Narrow" then
+		ANP.FontArialnNarrowGP()
 	elseif ANP.SV.FontsGP == "Black Chancery" then
 		ANP.BlackChanceryGP()
 	elseif ANP.SV.FontsGP == "Century Gothic" then
 		ANP.CenturyGothicGP()
 	elseif ANP.SV.FontsGP == "Consolas" then
 		ANP.FontConsolasGP()
+	elseif ANP.SV.FontsGP == "Fwntlgudc 70 DB" then
+		ANP.fwntlgudc70_dbGP()
+	elseif ANP.SV.FontsGP == "Fwudc 70 Med" then
+		ANP.fwudc_70_mGP()
+	elseif ANP.SV.FontsGP == "Kafupenji Med" then
+		ANP.kafupenji_mGP()
 	elseif ANP.SV.FontsGP == "ESO Cartographer" then
 		ANP.FontCartographerGP()
 	elseif ANP.SV.FontsGP == "Fitzgerald" then
 		ANP.FontFitzgeraldGP()
+	elseif ANP.SV.FontsGP == "Futura" then
+		ANP.FontFuturaGP()
+	elseif ANP.SV.FontsGP == "Futura Con Book" then
+		ANP.FontFuturaCondensedBookGP()
+	elseif ANP.SV.FontsGP == "Futura Con Med" then
+		ANP.FontFuturaCondensedMedGP()
+	elseif ANP.SV.FontsGP == "Futura Con Bold" then
+		ANP.FontFuturaCondensedBoldGP()
+	elseif ANP.SV.FontsGP == "Futura Std Con" then
+		ANP.FontFuturaStandardCondensedGP()
+	elseif ANP.SV.FontsGP == "Futura Std Con Bold" then
+		ANP.FontFuturaStandardCondensedBoldGP()
+	elseif ANP.SV.FontsGP == "Futura Std Con Lt" then
+		ANP.FontFuturaStandardCondensedLightGP()
 	elseif ANP.SV.FontsGP == "Gentium" then
 		ANP.FontGentiumGP()
-	elseif ANP.SV.FontsGP == "Hooked Up" then
+	elseif ANP.SV.FontsGP == "All Hooked Up" then
 		ANP.FontHookedUpGP()
 	elseif ANP.SV.FontsGP == "Magic Cards Normal" then
 		ANP.MagicCardsNormalGP()
-	elseif ANP.SV.FontsGP == "ProseAntique" then
+	elseif ANP.SV.FontsGP == "Prose Antique" then
 		ANP.FontProseAntiqueGP()
 	elseif ANP.SV.FontsGP == "Skurri" then
 		ANP.FontSkurriGP()
@@ -85,14 +121,12 @@ function ANP.Fonts()
 		ANP.FontHandwrittenGP()
 	elseif ANP.SV.FontsGP == "Trajan Pro" then
 		ANP.FontTrajanProGP()
-	elseif ANP.SV.FontsGP == "Univers 55" then
+	elseif ANP.SV.FontsGP == "Univers LT Std 55" then
 		ANP.FontUnivers55GP()		
-	elseif ANP.SV.FontsGP == "Univers 57" then
+	elseif ANP.SV.FontsGP == "Univers LT Std 57 Cn" then
 		ANP.FontUnivers57GP()
-	elseif ANP.SV.FontsGP == "Univers 67" then
+	else ANP.SV.FontsGP = "Univers LT Std 47 Cn Lt"
 		ANP.FontUnivers67GP()
-	else ANP.SV.FontsGP = "Futura Condensed"
-		ANP.FontFuturaCondensedGP()
 	end
   end
 end
