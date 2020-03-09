@@ -139,11 +139,6 @@ function ANP.FontCrimsonTextKB()
 	SetNameplateKeyboardFont("AdvancedNameplates/fonts/CrimsonText-Regular.ttf", 1)
 end
 
--- Nanum Pen Script
-function ANP.FontNanumPenScriptKB()
-	SetNameplateKeyboardFont("AdvancedNameplates/fonts/NanumPenScript-Regular.ttf", 1)
-end
-
 -- Patrick Hand SC
 function ANP.FontPatrickHandSCKB()
 	SetNameplateKeyboardFont("AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf", 1)
@@ -151,7 +146,7 @@ end
 
 -- Permanent Marker
 function ANP.FontPermanentMarkerKB()
-	SetNameplateKeyboardFont("AdvancedNameplates/fonts/PermanentMarker-Regular.ttf", 1)
+	SetNameplateKeyboardFont("AdvancedNameplates/fonts/PermanentMarker.ttf", 1)
 end
 
 -- Functions to call when changing font with Gamepad UI
@@ -290,11 +285,6 @@ function ANP.FontCrimsonTextGP()
 	SetNameplateGamepadFont("AdvancedNameplates/fonts/CrimsonText-Regular.ttf", 1)
 end
 
--- Nanum Pen Script
-function ANP.FontNanumPenScriptGP()
-	SetNameplateGamepadFont("AdvancedNameplates/fonts/NanumPenScript-Regular.ttf", 1)
-end
-
 -- Patrick Hand SC
 function ANP.FontPatrickHandSCGP()
 	SetNameplateGamepadFont("AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf", 1)
@@ -302,5 +292,5 @@ end
 
 -- Permanent Marker
 function ANP.FontPermanentMarkerGP()
-	SetNameplateGamepadFont("AdvancedNameplates/fonts/PermanentMarker-Regular.ttf", 1)
+	SetNameplateGamepadFont("AdvancedNameplates/fonts/PermanentMarker.ttf", 1)
 end

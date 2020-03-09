@@ -65,14 +65,11 @@ function ANP.Fonts()
 		ANP.FontUnivers55KB()		
 	elseif ANP.SV.FontsKB == "Univers LT Std 57 Cn" then
 		ANP.FontUnivers57KB()
-	else ANP.SV.FontsKB = "Univers Lt Std Con (Default)"
+	elseif ANP.SV.FontsKB == "Univers Lt Std Con (Default)" then
 		ANP.FontUnivers67KB()
-    -- Here
-	else ANP.SV.FontsKB = "Crimson Text"
+	elseif ANP.SV.FontsKB == "Crimson Text" then
 		ANP.FontCrimsonTextKB()
-	else ANP.SV.FontsKB = "Nanum Pen Script"
-		ANP.FontNanumPenScriptKB()
-	else ANP.SV.FontsKB = "Patrick Hand SC"
+	elseif ANP.SV.FontsKB == "Patrick Hand SC" then
 		ANP.FontPatrickHandSCKB()
 	else ANP.SV.FontsKB = "Permanent Marker"
 		ANP.FontPermanentMarkerKB()
@@ -134,16 +131,13 @@ function ANP.Fonts()
 		ANP.FontUnivers55GP()		
 	elseif ANP.SV.FontsGP == "Univers LT Std 57 Cn" then
 		ANP.FontUnivers57GP()
-	else ANP.SV.FontsGP = "Univers Lt Std Con (Default)"
+	elseif ANP.SV.FontsGP == "Univers Lt Std Con (Default)" then
 		ANP.FontUnivers67GP()
-    -- Here
-	else ANP.SV.FontsKB = "Crimson Text"
+	elseif ANP.SV.FontsGP == "Crimson Text" then
 		ANP.FontCrimsonTextGP()
-	else ANP.SV.FontsKB = "Nanum Pen Script"
-		ANP.FontNanumPenScriptGP()
-	else ANP.SV.FontsKB = "Patrick Hand SC"
+	elseif ANP.SV.FontsGP == "Patrick Hand SC" then
 		ANP.FontPatrickHandSCGP()
-	else ANP.SV.FontsKB = "Permanent Marker"
+	else ANP.SV.FontsGP = "Permanent Marker"
 		ANP.FontPermanentMarkerGP()
 	end
   end
@@ -168,9 +162,8 @@ function OnAddOnLoaded(eventCode, addOnName)
     LMP:Register("font", "Magic Cards Normal",      [[AdvancedNameplates/fonts/MagicCardsNormal.ttf]]           )
     LMP:Register("font", "Skurri",                  [[AdvancedNameplates/fonts/Skurri.ttf]]                     )
     LMP:Register("font", "Crimson Text",            [[AdvancedNameplates/fonts/CrimsonText-Regular.ttf]]        )
-    LMP:Register("font", "Nanum Pen Script",        [[AdvancedNameplates/fonts/NanumPenScript-Regular.ttf]]     )
     LMP:Register("font", "Patrick Hand SC",         [[AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf]]      )
-    LMP:Register("font", "Permanent Marker",        [[AdvancedNameplates/fonts/PermanentMarker-Regular.ttf]]    )
+    LMP:Register("font", "Permanent Marker",        [[AdvancedNameplates/fonts/PermanentMarker.ttf]]            )
     
 	local defaults = {
 		FontsKB = "Univers Lt Std Con (Default)",
