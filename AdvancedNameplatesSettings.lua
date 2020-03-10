@@ -47,15 +47,14 @@ local ANPpanel = {
 	    type = "panel",
 	    name = "Advanced Nameplates",
 	    displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
-	    author = "Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
-	    version = "1.3",
+	    author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
+	    version = "1.8",
 	    slashCommand = "/anp",
 		registerForRefresh = true,
         registerForDefaults = true,
 }
 
-local LAM2 = LibStub:GetLibrary("LibAddonMenu-2.0")
-	if ( not LAM2 ) then return end
+local LAM2 = LibAddonMenu2
 
 local ANPoptions = { 
 	[1] = {
