@@ -2,8 +2,40 @@
   -- Advanced Nameplates
   -- Tierney11290 (Stratejacket) - 2017
   ---------------------------------------
-  
+
 ANP = ANP or {}
+-------------------------------------------------
+----- early helper                          -----
+-------------------------------------------------
+
+local function is_in(search_value, search_table)
+    for k, v in pairs(search_table) do
+        if search_value == v then return true end
+        if type(search_value) == "string" then
+            if string.find(string.lower(v), string.lower(search_value)) then return true end
+        end
+    end
+    return false
+end
+
+-------------------------------------------------
+----- lang setup                            -----
+-------------------------------------------------
+
+ANP.client_lang = GetCVar("language.2")
+ANP.effective_lang = nil
+ANP.supported_lang = { "en", }
+if is_in(ANP.client_lang, ANP.supported_lang) then
+  ANP.effective_lang = ANP.client_lang
+else
+  ANP.effective_lang = "en"
+end
+ANP.supported_lang = ANP.client_lang == ANP.effective_lang
+
+-------------------------------------------------
+----- mod                                   -----
+-------------------------------------------------
+
 ANP.appName = "AdvancedNameplates"
 local LMP = LibMediaProvider
 
@@ -11,7 +43,7 @@ function ANP.Fonts()
 
   -- If using Keyboard & Mouse mode then do the following
   if IsInGamepadPreferredMode() == false then
-  
+
 	-- Keyboard Font Calls for LAM --
 	if ANP.SV.FontsKB == "Adventure" then
 		ANP.FontAdventureKB()
@@ -62,7 +94,7 @@ function ANP.Fonts()
 	elseif ANP.SV.FontsKB == "Trajan Pro" then
 		ANP.FontTrajanProKB()
 	elseif ANP.SV.FontsKB == "Univers LT Std 55" then
-		ANP.FontUnivers55KB()		
+		ANP.FontUnivers55KB()
 	elseif ANP.SV.FontsKB == "Univers LT Std 57 Cn" then
 		ANP.FontUnivers57KB()
 	elseif ANP.SV.FontsKB == "Univers Lt Std Con (Default)" then
@@ -76,7 +108,7 @@ function ANP.Fonts()
 	end
 
   -- If using Gamepad mode then do the following
-  elseif IsInGamepadPreferredMode() == true then	
+  elseif IsInGamepadPreferredMode() == true then
 
     -- Gamepad Font Calls for LAM --
 	if ANP.SV.FontsGP == "Adventure" then
@@ -128,7 +160,7 @@ function ANP.Fonts()
 	elseif ANP.SV.FontsGP == "Trajan Pro" then
 		ANP.FontTrajanProGP()
 	elseif ANP.SV.FontsGP == "Univers LT Std 55" then
-		ANP.FontUnivers55GP()		
+		ANP.FontUnivers55GP()
 	elseif ANP.SV.FontsGP == "Univers LT Std 57 Cn" then
 		ANP.FontUnivers57GP()
 	elseif ANP.SV.FontsGP == "Univers Lt Std Con (Default)" then
@@ -149,7 +181,7 @@ end
 
 function OnAddOnLoaded(eventCode, addOnName)
     if (ANP.appName ~= addOnName) then return end
-	
+
     LMP:Register("font", "Adventure",               [[AdvancedNameplates/fonts/Adventure.ttf]]                  )
     LMP:Register("font", "Arial Narrow",         	[[AdvancedNameplates/fonts/arialn.ttf]]                     )
     LMP:Register("font", "Black Chancery",  		[[AdvancedNameplates/fonts/BlackChancery.ttf]]              )
@@ -164,19 +196,19 @@ function OnAddOnLoaded(eventCode, addOnName)
     LMP:Register("font", "Crimson Text",            [[AdvancedNameplates/fonts/CrimsonText-Regular.ttf]]        )
     LMP:Register("font", "Patrick Hand SC",         [[AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf]]      )
     LMP:Register("font", "Permanent Marker",        [[AdvancedNameplates/fonts/PermanentMarker.ttf]]            )
-    
+
 	local defaults = {
 		FontsKB = "Univers Lt Std Con (Default)",
 		FontsGP = "Futura Std Con",
 	}
-	
+
 	ANP.SV = ZO_SavedVars:NewAccountWide("AdvancedNameplates_SavedVariables", 1, nil, defaults)
-	
+
  -- ANP.SizeKB()
 	ANP.Fonts()
-	
+
     ANP:initLAM2()
-	
+
 end
 
 EVENT_MANAGER:RegisterForEvent(ANP.appName, EVENT_ADD_ON_LOADED, OnAddOnLoaded)

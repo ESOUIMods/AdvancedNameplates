@@ -48,47 +48,57 @@ local ANPpanel = {
 	    name = "Advanced Nameplates",
 	    displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
 	    author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
-	    version = "2.1",
+	    version = "2.2",
 	    slashCommand = "/anp",
 		registerForRefresh = true,
         registerForDefaults = true,
 }
 
+local ANPLocalization = {
+  ["en"] = {
+    keyboardHeader = "Keyboard Nameplates",
+    gamepadHeader = "Gamepad Nameplates",
+    fontName = "Font",
+    fontKeyboardTip = "Changes the look of the text in Keyboard Mode.",
+    fontGamepadTip = "Changes the look of the text in Gamepad Mode.",
+  }
+}
+
 local LAM2 = LibAddonMenu2
 
-local ANPoptions = { 
+local ANPoptions = {
 	[1] = {
 	    type = "header",
-	    name = "Keyboard Nameplates",
+	    name = ANPLocalization[ANP.effective_lang].keyboardHeader,
 	    registerForRefresh = true,
 	    registerForDefaults = true,
 	},
 	[2] = {
 		type = "dropdown",
-		name = "Font",
-		tooltip = "Changes the look of the text in Keyboard Mode.",
+		name = ANPLocalization[ANP.effective_lang].fontName,
+		tooltip = ANPLocalization[ANP.effective_lang].fontKeyboardTip,
 		choices = FontList,
 		default = "Univers 57",
 		getFunc = function() return ANP.SV.FontsKB end,
-		setFunc = function(val) 
-			ANP.SV.FontsKB = val 
+		setFunc = function(val)
+			ANP.SV.FontsKB = val
 			ANP.Fonts(val)
 		end,
 	},
 	[3] = {
 	    type = "header",
-	    name = "Gamepad Nameplates",
+	    name = ANPLocalization[ANP.effective_lang].gamepadHeader,
 	    registerForRefresh = true,
 	    registerForDefaults = true,
 	},
 	[4] = {
 		type = "dropdown",
-		name = "Font",
-		tooltip = "Changes the look of the text in Gamepad Mode.",
+		name = ANPLocalization[ANP.effective_lang].fontName,
+		tooltip = ANPLocalization[ANP.effective_lang].fontGamepadTip,
 		choices = FontList,
 		defaults = "Futura Condensed",
 		getFunc = function() return ANP.SV.FontsGP end,
-		setFunc = function(val) ANP.SV.FontsGP = val 
+		setFunc = function(val) ANP.SV.FontsGP = val
 		  ANP.Fonts(val)
 		end,
 	},
