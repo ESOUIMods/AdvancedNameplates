@@ -22,7 +22,7 @@ end
 ----- lang setup                            -----
 -------------------------------------------------
 
-ANP.client_lang = GetCVar("language.2")
+ANP.client_lang = GetCVar("Language.2")
 ANP.effective_lang = nil
 ANP.supported_lang = { "en", }
 if is_in(ANP.client_lang, ANP.supported_lang) then
