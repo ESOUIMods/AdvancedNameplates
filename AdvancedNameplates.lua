@@ -24,7 +24,7 @@ end
 
 ANP.client_lang = GetCVar("Language.2")
 ANP.effective_lang = nil
-ANP.supported_lang = { "en", }
+ANP.supported_lang = { "en", "es", }
 if is_in(ANP.client_lang, ANP.supported_lang) then
   ANP.effective_lang = ANP.client_lang
 else

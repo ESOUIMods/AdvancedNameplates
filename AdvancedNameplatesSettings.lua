@@ -44,14 +44,15 @@ local StyleList = {
 }
 
 local ANPpanel = {
-	    type = "panel",
-	    name = "Advanced Nameplates",
-	    displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
-	    author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
-	    version = "2.2",
-	    slashCommand = "/anp",
-		registerForRefresh = true,
-        registerForDefaults = true,
+  type = "panel",
+  name = "Advanced Nameplates",
+  displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
+  author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
+  website = "https://www.esoui.com/downloads/info2558-AdvancedNameplatesFlamesofAmbition.html",
+  version = "2.21",
+  slashCommand = "/anp",
+  registerForRefresh = true,
+  registerForDefaults = true,
 }
 
 local ANPLocalization = {
@@ -62,6 +63,14 @@ local ANPLocalization = {
     fontKeyboardTip = "Changes the look of the text in Keyboard Mode.",
     fontGamepadTip = "Changes the look of the text in Gamepad Mode.",
   }
+  ["es"] = {
+    keyboardHeader = "Nombres flotantes (teclado)",
+    gamepadHeader = "Nombres flotantes (mando)",
+    fontName = "Fuente",
+    fontKeyboardTip = "Cambia la apariencia del texto en el modo teclado.",
+    fontGamepadTip = "Cambia la apariencia del texto en el modo mando.",
+  }
+
 }
 
 local LAM2 = LibAddonMenu2
