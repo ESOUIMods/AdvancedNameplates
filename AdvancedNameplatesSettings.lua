@@ -49,7 +49,7 @@ local ANPpanel = {
   displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
   author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
   website = "https://www.esoui.com/downloads/info2558-AdvancedNameplatesFlamesofAmbition.html",
-  version = "2.24",
+  version = "2.25",
   slashCommand = "/anp",
   registerForRefresh = true,
   registerForDefaults = true,
@@ -107,7 +107,7 @@ local ANPoptions = {
     getFunc = function() return ANP.SV.FontsKB end,
     setFunc = function(val)
       ANP.SV.FontsKB = val
-      ANP.Fonts(val)
+      ANP.SetFont()
     end,
   },
   [5] = {
@@ -123,7 +123,7 @@ local ANPoptions = {
     getFunc = function() return ANP.SV.FontsGP end,
     setFunc = function(val)
       ANP.SV.FontsGP = val
-      ANP.Fonts(val)
+      ANP.SetFont()
     end,
   },
 }
