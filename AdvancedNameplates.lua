@@ -99,8 +99,6 @@ function ANP.SetFont()
       ANP.FontUnivers57KB()
     elseif ANP.SV.FontsKB == "Univers Lt Std Con (Default)" then
       ANP.FontUnivers67KB()
-    elseif ANP.SV.FontsKB == "Crimson Text" then
-      ANP.FontCrimsonTextKB()
     elseif ANP.SV.FontsKB == "Patrick Hand SC" then
       ANP.FontPatrickHandSCKB()
     else
@@ -166,8 +164,6 @@ function ANP.SetFont()
       ANP.FontUnivers57GP()
     elseif ANP.SV.FontsGP == "Univers Lt Std Con (Default)" then
       ANP.FontUnivers67GP()
-    elseif ANP.SV.FontsGP == "Crimson Text" then
-      ANP.FontCrimsonTextGP()
     elseif ANP.SV.FontsGP == "Patrick Hand SC" then
       ANP.FontPatrickHandSCGP()
     else
@@ -201,7 +197,6 @@ function OnAddOnLoaded(eventCode, addOnName)
   LMP:Register("font", "All Hooked Up", [[AdvancedNameplates/fonts/HookedUp.ttf]])
   LMP:Register("font", "Magic Cards Normal", [[AdvancedNameplates/fonts/MagicCardsNormal.ttf]])
   LMP:Register("font", "Skurri", [[AdvancedNameplates/fonts/Skurri.ttf]])
-  LMP:Register("font", "Crimson Text", [[AdvancedNameplates/fonts/CrimsonText-Regular.ttf]])
   LMP:Register("font", "Patrick Hand SC", [[AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf]])
   LMP:Register("font", "Permanent Marker", [[AdvancedNameplates/fonts/PermanentMarker.ttf]])
 

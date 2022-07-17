@@ -3,7 +3,7 @@
 -- Tierney11290 (Stratejacket) - 2017
 ---------------------------------------
 
--- Functions to call when changing font with Keyboard UI  
+-- Functions to call when changing font with Keyboard UI
 
 -- Adventure
 function ANP.FontAdventureKB()
@@ -132,11 +132,6 @@ end
 -- univers LT Std 47 Cn Lt
 function ANP.FontUnivers67KB()
   ANP:SetFontKB("EsoUI/Common/Fonts/univers67.otf")
-end
-
--- Crimson Text
-function ANP.FontCrimsonTextKB()
-  ANP:SetFontKB("AdvancedNameplates/fonts/CrimsonText-Regular.ttf")
 end
 
 -- Patrick Hand SC
@@ -278,11 +273,6 @@ end
 -- univers LT Std 47 Cn Lt
 function ANP.FontUnivers67GP()
   ANP:SetFontGP("EsoUI/Common/Fonts/univers67.otf")
-end
-
--- Crimson Text
-function ANP.FontCrimsonTextGP()
-  ANP:SetFontGP("AdvancedNameplates/fonts/CrimsonText-Regular.ttf")
 end
 
 -- Patrick Hand SC
