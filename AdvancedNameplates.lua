@@ -178,7 +178,7 @@ function ANP:SetFontKB(fontName)
   SetNameplateKeyboardFont(fontString, 1)
 end
 
-function ANP:SetFontGP(fontString, fontSize)
+function ANP:SetFontGP(fontName)
   local fontString = string.format("%s|%d", fontName, ANP.SV.SizeKB)
   SetNameplateGamepadFont(fontString, 1)
 end

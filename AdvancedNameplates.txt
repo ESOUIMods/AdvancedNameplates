@@ -1,11 +1,11 @@
 ## Title: Advanced Nameplates
 ## Description: Provides Additional Options For Nameplates
 ## Author: |cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r
-## APIVersion: 101034 101035
-## AddOnVersion: 227
-## Version: 2.27
+## APIVersion: 101035 101036
+## AddOnVersion: 228
+## Version: 2.28
 ## SavedVariables: AdvancedNameplates_SavedVariables
-## DependsOn: LibAddonMenu-2.0>=34 LibMediaProvider-1.0>=19
+## DependsOn: LibAddonMenu-2.0>=34 LibMediaProvider-1.0>=22
 
 AdvancedNameplates.lua
 AdvancedNameplatesFunctions.lua
