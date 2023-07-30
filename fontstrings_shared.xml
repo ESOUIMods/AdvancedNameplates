@@ -1,0 +1,18 @@
+<GuiXml>
+    <String name="AN_ADVENTURE_FONT" value="AdvancedNameplates/fonts/Adventure.ttf" />
+    <String name="AN_ARIAL_NARROW_FONT" value="AdvancedNameplates/fonts/arialn.ttf" />
+    <String name="AN_BLACK_CHANCERY_FONT" value="AdvancedNameplates/fonts/BlackChancery.ttf" />
+    <String name="AN_CENTURY_GOTHIC_FONT" value="AdvancedNameplates/fonts/CenturyGothic.ttf" />
+    <String name="AN_CRIMSON_REGULAR_FONT" value="AdvancedNameplates/fonts/CrimsonText-Regular.ttf" />
+    <String name="AN_ESO_CARTOGRAPHER_FONT" value="AdvancedNameplates/fonts/esocartographer-bold.otf" />
+    <String name="AN_FITZGERALD_FONT" value="AdvancedNameplates/fonts/Fitzgerald.ttf" />
+    <String name="AN_FUTURA_STD_CON_FONT" value="EsoUI/Common/Fonts/futurastd-condensed.otf" />
+    <String name="AN_FUTURA_STD_CON_BOLD_FONT" value="EsoUI/Common/Fonts/futurastd-condensedbold.otf" />
+    <String name="AN_FUTURA_STD_CON_LT_FONT" value="EsoUI/Common/Fonts/futurastd-condensedlight.otf" />
+    <String name="AN_GENTIUM_FONT" value="AdvancedNameplates/fonts/Gentium.ttf" />
+    <String name="AN_ALL_HOOKED_UP_FONT" value="AdvancedNameplates/fonts/HookedUp.ttf" />
+    <String name="AN_MAGIC_CARDS_NORMAL_FONT" value="AdvancedNameplates/fonts/MagicCardsNormal.ttf" />
+    <String name="AN_PATRICK_HAND_SC_FONT" value="AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf" />
+    <String name="AN_PERMANENT_MARKER_FONT" value="AdvancedNameplates/fonts/PermanentMarker.ttf" />
+    <String name="AN_SKURRI_FONT" value="AdvancedNameplates/fonts/Skurri.ttf" />
+</GuiXml>

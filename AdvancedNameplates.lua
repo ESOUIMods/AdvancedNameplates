@@ -55,18 +55,12 @@ function ANP.SetFont()
       ANP.CenturyGothicKB()
     elseif ANP.SV.FontsKB == "Consolas" then
       ANP.FontConsolasKB()
-    elseif ANP.SV.FontsKB == "Fwntlgudc 70 DB" then
-      ANP.fwntlgudc70_dbKB()
-    elseif ANP.SV.FontsKB == "Fwudc 70 Med" then
-      ANP.fwudc_70_mKB()
-    elseif ANP.SV.FontsKB == "Kafupenji Med" then
-      ANP.kafupenji_mKB()
+    elseif ANP.SV.FontsKB == "Crimson Regular" then
+      ANP.FontCrimsonRegularKB()
     elseif ANP.SV.FontsKB == "ESO Cartographer" then
       ANP.FontCartographerKB()
     elseif ANP.SV.FontsKB == "Fitzgerald" then
       ANP.FontFitzgeraldKB()
-    elseif ANP.SV.FontsKB == "Futura" then
-      ANP.FontFuturaKB()
     elseif ANP.SV.FontsKB == "Futura Con Book" then
       ANP.FontFuturaCondensedBookKB()
     elseif ANP.SV.FontsKB == "Futura Con Med" then
@@ -120,18 +114,12 @@ function ANP.SetFont()
       ANP.CenturyGothicGP()
     elseif ANP.SV.FontsGP == "Consolas" then
       ANP.FontConsolasGP()
-    elseif ANP.SV.FontsGP == "Fwntlgudc 70 DB" then
-      ANP.fwntlgudc70_dbGP()
-    elseif ANP.SV.FontsGP == "Fwudc 70 Med" then
-      ANP.fwudc_70_mGP()
-    elseif ANP.SV.FontsGP == "Kafupenji Med" then
-      ANP.kafupenji_mGP()
+    elseif ANP.SV.FontsGP == "Crimson Regular" then
+      ANP.FontCrimsonRegularGP()
     elseif ANP.SV.FontsGP == "ESO Cartographer" then
       ANP.FontCartographerGP()
     elseif ANP.SV.FontsGP == "Fitzgerald" then
       ANP.FontFitzgeraldGP()
-    elseif ANP.SV.FontsGP == "Futura" then
-      ANP.FontFuturaGP()
     elseif ANP.SV.FontsGP == "Futura Con Book" then
       ANP.FontFuturaCondensedBookGP()
     elseif ANP.SV.FontsGP == "Futura Con Med" then
@@ -178,7 +166,7 @@ function ANP:SetFontKB(fontName)
   SetNameplateKeyboardFont(fontString, 1)
 end
 
-function ANP:SetFontGP(fontName)
+function ANP:SetFontGP(fontString, fontSize)
   local fontString = string.format("%s|%d", fontName, ANP.SV.SizeKB)
   SetNameplateGamepadFont(fontString, 1)
 end
@@ -186,19 +174,22 @@ end
 function OnAddOnLoaded(eventCode, addOnName)
   if (ANP.appName ~= addOnName) then return end
 
-  LMP:Register("font", "Adventure", [[AdvancedNameplates/fonts/Adventure.ttf]])
-  LMP:Register("font", "Arial Narrow", [[AdvancedNameplates/fonts/arialn.ttf]])
-  LMP:Register("font", "Black Chancery", [[AdvancedNameplates/fonts/BlackChancery.ttf]])
-  LMP:Register("font", "Century Gothic", [[AdvancedNameplates/fonts/CenturyGothic.ttf]])
-  LMP:Register("font", "ESO Cartographer", [[AdvancedNameplates/fonts/esocartographer-bold.otf]])
-  LMP:Register("font", "Fitzgerald", [[AdvancedNameplates/fonts/Fitzgerald.ttf]])
-  LMP:Register("font", "Futura Con Med", [[AdvancedNameplates/fonts/fcm.ttf]])
-  LMP:Register("font", "Gentium", [[AdvancedNameplates/fonts/Gentium.ttf]])
-  LMP:Register("font", "All Hooked Up", [[AdvancedNameplates/fonts/HookedUp.ttf]])
-  LMP:Register("font", "Magic Cards Normal", [[AdvancedNameplates/fonts/MagicCardsNormal.ttf]])
-  LMP:Register("font", "Skurri", [[AdvancedNameplates/fonts/Skurri.ttf]])
-  LMP:Register("font", "Patrick Hand SC", [[AdvancedNameplates/fonts/PatrickHandSC-Regular.ttf]])
-  LMP:Register("font", "Permanent Marker", [[AdvancedNameplates/fonts/PermanentMarker.ttf]])
+  LMP:Register("font", "Adventure", "$(AN_ADVENTURE_FONT)")
+  LMP:Register("font", "Arial Narrow", "$(AN_ARIAL_NARROW_FONT)")
+  LMP:Register("font", "Black Chancery", "$(AN_BLACK_CHANCERY_FONT)")
+  LMP:Register("font", "Century Gothic", "$(AN_CENTURY_GOTHIC_FONT)")
+  LMP:Register("font", "Crimson Regular", "$(AN_CRIMSON_REGULAR_FONT)")
+  LMP:Register("font", "ESO Cartographer", "$(AN_ESO_CARTOGRAPHER_FONT)")
+  LMP:Register("font", "Fitzgerald", "$(AN_FITZGERALD_FONT)")
+  LMP:Register("font", "Futura Std Con", "$(AN_FUTURA_STD_CON_FONT)")
+  LMP:Register("font", "Futura Std Con Bold", "$(AN_FUTURA_STD_CON_BOLD_FONT)")
+  LMP:Register("font", "Futura Std Con Lt", "$(AN_FUTURA_STD_CON_LT_FONT)")
+  LMP:Register("font", "Gentium", "$(AN_GENTIUM_FONT)")
+  LMP:Register("font", "All Hooked Up", "$(AN_ALL_HOOKED_UP_FONT)")
+  LMP:Register("font", "Magic Cards Normal", "$(AN_MAGIC_CARDS_NORMAL_FONT)")
+  LMP:Register("font", "Patrick Hand SC", "$(AN_PATRICK_HAND_SC_FONT)")
+  LMP:Register("font", "Permanent Marker", "$(AN_PERMANENT_MARKER_FONT)")
+  LMP:Register("font", "Skurri", "$(AN_SKURRI_FONT)")
 
   local defaults = {
     FontsKB = "Univers Lt Std Con (Default)",
