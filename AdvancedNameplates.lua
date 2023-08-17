@@ -37,138 +37,51 @@ ANP.supported_lang = ANP.client_lang == ANP.effective_lang
 -------------------------------------------------
 
 ANP.appName = "AdvancedNameplates"
+ANP.fontStyleChoices = {}
+ANP.fontStyleValues = {}
 local LMP = LibMediaProvider
 
 function ANP.SetFont()
-
-  -- If using Keyboard & Mouse mode then do the following
-  if IsInGamepadPreferredMode() == false then
-
-    -- Keyboard Font Calls for LAM --
-    if ANP.SV.FontsKB == "Adventure" then
-      ANP.FontAdventureKB()
-    elseif ANP.SV.FontsKB == "Arial Narrow" then
-      ANP.FontArialnNarrowKB()
-    elseif ANP.SV.FontsKB == "Black Chancery" then
-      ANP.BlackChanceryKB()
-    elseif ANP.SV.FontsKB == "Century Gothic" then
-      ANP.CenturyGothicKB()
-    elseif ANP.SV.FontsKB == "Consolas" then
-      ANP.FontConsolasKB()
-    elseif ANP.SV.FontsKB == "Crimson Regular" then
-      ANP.FontCrimsonRegularKB()
-    elseif ANP.SV.FontsKB == "ESO Cartographer" then
-      ANP.FontCartographerKB()
-    elseif ANP.SV.FontsKB == "Fitzgerald" then
-      ANP.FontFitzgeraldKB()
-    elseif ANP.SV.FontsKB == "Futura Con Book" then
-      ANP.FontFuturaCondensedBookKB()
-    elseif ANP.SV.FontsKB == "Futura Con Med" then
-      ANP.FontFuturaCondensedMedKB()
-    elseif ANP.SV.FontsKB == "Futura Con Bold" then
-      ANP.FontFuturaCondensedBoldKB()
-    elseif ANP.SV.FontsKB == "Futura Std Con" then
-      ANP.FontFuturaStandardCondensedKB()
-    elseif ANP.SV.FontsKB == "Futura Std Con Bold" then
-      ANP.FontFuturaStandardCondensedBoldKB()
-    elseif ANP.SV.FontsKB == "Futura Std Con Lt" then
-      ANP.FontFuturaStandardCondensedLightKB()
-    elseif ANP.SV.FontsKB == "Gentium" then
-      ANP.FontGentiumKB()
-    elseif ANP.SV.FontsKB == "All Hooked Up" then
-      ANP.FontHookedUpKB()
-    elseif ANP.SV.FontsKB == "Magic Cards Normal" then
-      ANP.MagicCardsNormalKB()
-    elseif ANP.SV.FontsKB == "Prose Antique" then
-      ANP.FontProseAntiqueKB()
-    elseif ANP.SV.FontsKB == "Skurri" then
-      ANP.FontSkurriKB()
-    elseif ANP.SV.FontsKB == "Skyrim Handwritten" then
-      ANP.FontHandwrittenKB()
-    elseif ANP.SV.FontsKB == "Trajan Pro" then
-      ANP.FontTrajanProKB()
-    elseif ANP.SV.FontsKB == "Univers LT Std 55" then
-      ANP.FontUnivers55KB()
-    elseif ANP.SV.FontsKB == "Univers LT Std 57 Cn" then
-      ANP.FontUnivers57KB()
-    elseif ANP.SV.FontsKB == "Univers Lt Std Con (Default)" then
-      ANP.FontUnivers67KB()
-    elseif ANP.SV.FontsKB == "Patrick Hand SC" then
-      ANP.FontPatrickHandSCKB()
-    else
-      ANP.SV.FontsKB = "Permanent Marker"
-      ANP.FontPermanentMarkerKB()
-    end
-
-    -- If using Gamepad mode then do the following
-  elseif IsInGamepadPreferredMode() == true then
-
-    -- Gamepad Font Calls for LAM --
-    if ANP.SV.FontsGP == "Adventure" then
-      ANP.FontAdventureGP()
-    elseif ANP.SV.FontsGP == "Arial Narrow" then
-      ANP.FontArialnNarrowGP()
-    elseif ANP.SV.FontsGP == "Black Chancery" then
-      ANP.BlackChanceryGP()
-    elseif ANP.SV.FontsGP == "Century Gothic" then
-      ANP.CenturyGothicGP()
-    elseif ANP.SV.FontsGP == "Consolas" then
-      ANP.FontConsolasGP()
-    elseif ANP.SV.FontsGP == "Crimson Regular" then
-      ANP.FontCrimsonRegularGP()
-    elseif ANP.SV.FontsGP == "ESO Cartographer" then
-      ANP.FontCartographerGP()
-    elseif ANP.SV.FontsGP == "Fitzgerald" then
-      ANP.FontFitzgeraldGP()
-    elseif ANP.SV.FontsGP == "Futura Con Book" then
-      ANP.FontFuturaCondensedBookGP()
-    elseif ANP.SV.FontsGP == "Futura Con Med" then
-      ANP.FontFuturaCondensedMedGP()
-    elseif ANP.SV.FontsGP == "Futura Con Bold" then
-      ANP.FontFuturaCondensedBoldGP()
-    elseif ANP.SV.FontsGP == "Futura Std Con" then
-      ANP.FontFuturaStandardCondensedGP()
-    elseif ANP.SV.FontsGP == "Futura Std Con Bold" then
-      ANP.FontFuturaStandardCondensedBoldGP()
-    elseif ANP.SV.FontsGP == "Futura Std Con Lt" then
-      ANP.FontFuturaStandardCondensedLightGP()
-    elseif ANP.SV.FontsGP == "Gentium" then
-      ANP.FontGentiumGP()
-    elseif ANP.SV.FontsGP == "All Hooked Up" then
-      ANP.FontHookedUpGP()
-    elseif ANP.SV.FontsGP == "Magic Cards Normal" then
-      ANP.MagicCardsNormalGP()
-    elseif ANP.SV.FontsGP == "Prose Antique" then
-      ANP.FontProseAntiqueGP()
-    elseif ANP.SV.FontsGP == "Skurri" then
-      ANP.FontSkurriGP()
-    elseif ANP.SV.FontsGP == "Skyrim Handwritten" then
-      ANP.FontHandwrittenGP()
-    elseif ANP.SV.FontsGP == "Trajan Pro" then
-      ANP.FontTrajanProGP()
-    elseif ANP.SV.FontsGP == "Univers LT Std 55" then
-      ANP.FontUnivers55GP()
-    elseif ANP.SV.FontsGP == "Univers LT Std 57 Cn" then
-      ANP.FontUnivers57GP()
-    elseif ANP.SV.FontsGP == "Univers Lt Std Con (Default)" then
-      ANP.FontUnivers67GP()
-    elseif ANP.SV.FontsGP == "Patrick Hand SC" then
-      ANP.FontPatrickHandSCGP()
-    else
-      ANP.SV.FontsGP = "Permanent Marker"
-      ANP.FontPermanentMarkerGP()
-    end
+  if not IsInGamepadPreferredMode() then
+    ANP:SetKeyboardFont(ANP.SV.FontsKB)
+  elseif IsInGamepadPreferredMode() then
+    ANP:SetGamepadFont(ANP.SV.FontsGP)
   end
 end
 
-function ANP:SetFontKB(fontName)
-  local fontString = string.format("%s|%d", fontName, ANP.SV.SizeKB)
-  SetNameplateKeyboardFont(fontString, 1)
+function ANP:SetKeyboardFont(fontName)
+  local fontFilename = LMP:Fetch("font", fontName)
+  local fontString = string.format("%s|%d", fontFilename, ANP.SV.SizeKB)
+  SetNameplateKeyboardFont(fontString, ANP.SV.StylesKB - 1)
 end
 
-function ANP:SetFontGP(fontString, fontSize)
-  local fontString = string.format("%s|%d", fontName, ANP.SV.SizeKB)
-  SetNameplateGamepadFont(fontString, 1)
+function ANP:SetGamepadFont(fontName)
+  local fontFilename = LMP:Fetch("font", fontName)
+  local fontString = string.format("%s|%d", fontFilename, ANP.SV.SizeKB)
+  SetNameplateGamepadFont(fontString, ANP.SV.StylesKB - 1)
+end
+
+local ANP_FONT_STYLE_NORMAL = 1
+local ANP_FONT_STYLE_OUTLINE = 2
+local ANP_FONT_STYLE_OUTLINE_THICK = 3
+local ANP_FONT_STYLE_SHADOW = 4
+local ANP_FONT_STYLE_SOFT_SHADOW_THICK = 5
+local ANP_FONT_STYLE_SOFT_SHADOW_THIN = 6
+
+local StyleList = {
+  [ANP_FONT_STYLE_NORMAL] = "Normal",
+  [ANP_FONT_STYLE_OUTLINE] = "Outline",
+  [ANP_FONT_STYLE_OUTLINE_THICK] = "Thin-Outline",
+  [ANP_FONT_STYLE_SHADOW] = "Shadow",
+  [ANP_FONT_STYLE_SOFT_SHADOW_THICK] = "Soft-Shadow-Thick",
+  [ANP_FONT_STYLE_SOFT_SHADOW_THIN] = "Soft-Shadow-Thin",
+}
+
+function ANP:CreateFontStyleChoices()
+  for styleConstant, styleString in pairs(StyleList) do
+    ANP.fontStyleChoices[styleConstant] = styleString
+    ANP.fontStyleValues[styleConstant] = styleConstant
+  end
 end
 
 function OnAddOnLoaded(eventCode, addOnName)
@@ -194,12 +107,21 @@ function OnAddOnLoaded(eventCode, addOnName)
   local defaults = {
     FontsKB = "Univers Lt Std Con (Default)",
     FontsGP = "Futura Std Con",
+    StylesKB = ANP_FONT_STYLE_NORMAL - 1,
     SizeKB = 20,
   }
 
   ANP.SV = ZO_SavedVars:NewAccountWide("AdvancedNameplates_SavedVariables", 1, nil, defaults)
 
-  ANP.SetFont()
+  ANP:CreateFontStyleChoices()
+
+  if type(ANP.SV.StylesKB) ~= 'number' then ANP.SV.StylesKB = ANP_FONT_STYLE_NORMAL end
+
+  if not IsInGamepadPreferredMode() then
+    ANP:SetKeyboardFont(ANP.SV.FontsKB)
+  elseif IsInGamepadPreferredMode() then
+    ANP:SetGamepadFont(ANP.SV.FontsGP)
+  end
 
   ANP:initLAM2()
 

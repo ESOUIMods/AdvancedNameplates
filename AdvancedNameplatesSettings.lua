@@ -47,7 +47,7 @@ local ANPpanel = {
   displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
   author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
   website = "https://www.esoui.com/downloads/info2558-AdvancedNameplatesFlamesofAmbition.html",
-  version = "2.28",
+  version = "2.29",
   slashCommand = "/anp",
   registerForRefresh = true,
   registerForDefaults = true,
@@ -74,56 +74,69 @@ local ANPLocalization = {
 
 local LAM2 = LibAddonMenu2
 
-local ANPoptions = {
-  [1] = {
-    type = "header",
-    name = ANPLocalization[ANP.effective_lang].fontSizeHeader,
-  },
-  [2] = {
-    type = "slider",
-    name = "Size",
-    tooltip = "Move the slider to change the text size",
-    min = 20,
-    max = 48,
-    step = 1,
-    getFunc = function() return ANP.SV.SizeKB end,
-    setFunc = function(val)
-      ANP.SV.SizeKB = val
-      ANP.SetFont()
-    end,
-  },
-  [3] = {
-    type = "header",
-    name = ANPLocalization[ANP.effective_lang].keyboardHeader,
-  },
-  [4] = {
-    type = "dropdown",
-    name = ANPLocalization[ANP.effective_lang].fontName,
-    tooltip = ANPLocalization[ANP.effective_lang].fontKeyboardTip,
-    choices = FontList,
-    default = "Univers 57",
-    getFunc = function() return ANP.SV.FontsKB end,
-    setFunc = function(val)
-      ANP.SV.FontsKB = val
-      ANP.SetFont()
-    end,
-  },
-  [5] = {
-    type = "header",
-    name = ANPLocalization[ANP.effective_lang].gamepadHeader,
-  },
-  [6] = {
-    type = "dropdown",
-    name = ANPLocalization[ANP.effective_lang].fontName,
-    tooltip = ANPLocalization[ANP.effective_lang].fontGamepadTip,
-    choices = FontList,
-    defaults = "Futura Condensed",
-    getFunc = function() return ANP.SV.FontsGP end,
-    setFunc = function(val)
-      ANP.SV.FontsGP = val
-      ANP.SetFont()
-    end,
-  },
+local ANPoptions = {}
+ANPoptions[#ANPoptions + 1] = {
+  type = "header",
+  name = ANPLocalization[ANP.effective_lang].fontSizeHeader,
+}
+ANPoptions[#ANPoptions + 1] = {
+  type = "slider",
+  name = "Size",
+  tooltip = "Move the slider to change the text size",
+  min = 20,
+  max = 48,
+  step = 1,
+  getFunc = function() return ANP.SV.SizeKB end,
+  setFunc = function(val)
+    ANP.SV.SizeKB = val
+    ANP.SetFont()
+  end,
+}
+
+ANPoptions[#ANPoptions + 1] = {
+  type = "dropdown",
+  name = "Style",
+  tooltip = "This does not work yet. Changes the style of the text in Keyboard Mode.",
+  choices = ANP.fontStyleChoices,
+  choicesValues = ANP.fontStyleValues,
+  getFunc = function() return ANP.SV.StylesKB end,
+  setFunc = function(val)
+    ANP.SV.StylesKB = val
+    ANP.SetFont()
+  end,
+}
+
+ANPoptions[#ANPoptions + 1] = {
+  type = "header",
+  name = ANPLocalization[ANP.effective_lang].keyboardHeader,
+}
+ANPoptions[#ANPoptions + 1] = {
+  type = "dropdown",
+  name = ANPLocalization[ANP.effective_lang].fontName,
+  tooltip = ANPLocalization[ANP.effective_lang].fontKeyboardTip,
+  choices = FontList,
+  default = "Univers 57",
+  getFunc = function() return ANP.SV.FontsKB end,
+  setFunc = function(val)
+    ANP.SV.FontsKB = val
+    ANP:SetKeyboardFont(ANP.SV.FontsKB)
+  end,
+}
+ANPoptions[#ANPoptions + 1] = {
+  type = "header",
+  name = ANPLocalization[ANP.effective_lang].gamepadHeader,
+}
+ANPoptions[#ANPoptions + 1] = {
+  type = "dropdown",
+  name = ANPLocalization[ANP.effective_lang].fontName,
+  tooltip = ANPLocalization[ANP.effective_lang].fontGamepadTip,
+  choices = FontList,
+  defaults = "Futura Condensed",
+  getFunc = function() return ANP.SV.FontsGP end,
+  setFunc = function(val)
+    ANP.SV.FontsGP = val
+    ANP:SetGamepadFont(ANP.SV.FontsGP)
+  end,
 }
 
 function ANP:initLAM2()
