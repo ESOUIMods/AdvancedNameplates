@@ -5,7 +5,7 @@
 ## Version: 2.31
 ## AddOnVersion: 231
 ## SavedVariables: AdvancedNameplates_SavedVariables
-## DependsOn: LibAddonMenu-2.0>=35 LibMediaProvider-1.0>=28
+## DependsOn: LibAddonMenu-2.0>=36 LibMediaProvider-1.0>=28
 ## OptionalDependsOn: LibDebugLogger DebugLogViewer
 
 i18n\en.lua
