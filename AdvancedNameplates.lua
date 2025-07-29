@@ -1,7 +1,40 @@
----------------------------------------
+--[[
+-------------------------------------------------------------------------------
 -- Advanced Nameplates
--- Tierney11290 (Stratejacket) - 2017
----------------------------------------
+-------------------------------------------------------------------------------
+-- Original Addon by: Tierney11290 (Stratejacket), released in 2017
+-- License: MIT License
+--
+-- Current Maintainer: Sharlikran
+-- First upload: 2020-03-07
+--
+-- This project was revived and continued by the current maintainer with
+-- permission inferred from the original author's ESOUI project page,
+-- in accordance with community guidelines.
+--
+-------------------------------------------------------------------------------
+-- License Terms:
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in
+-- all copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+-- THE SOFTWARE.
+-------------------------------------------------------------------------------
+]]
+
 local LMP = LibMediaProvider
 local LAM = LibAddonMenu2
 
@@ -116,7 +149,7 @@ local function CreatePanel()
     displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
     author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
     website = "https://www.esoui.com/downloads/info2558-AdvancedNameplatesNecrom.html",
-    version = "2.33",
+    version = "2.34",
     slashCommand = "/anp",
     registerForRefresh = true,
     registerForDefaults = true,
