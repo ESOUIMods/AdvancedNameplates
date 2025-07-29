@@ -116,7 +116,7 @@ local function CreatePanel()
     displayName = ZO_HIGHLIGHT_TEXT:Colorize("Advanced Nameplates"),
     author = "|cff9b15Sharlikran|r, Tierney11290 (Stratejacket), |c66ccffErian Kalil|r",
     website = "https://www.esoui.com/downloads/info2558-AdvancedNameplatesNecrom.html",
-    version = "2.32",
+    version = "2.33",
     slashCommand = "/anp",
     registerForRefresh = true,
     registerForDefaults = true,
